@@ -22,9 +22,10 @@ public class ProductCategoryRepositoryTest {
 
     @Test
     public void saveTest() {
-        ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategoryName("Haitao's favarite");
-        productCategory.setCategoryType(4);
+        ProductCategory productCategory = repository.findOne(3);
+        productCategory.setCategoryType(13);
+
+
         repository.save(productCategory);
     }
 }
