@@ -7,10 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Optional;
-
-import static org.junit.Assert.*;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductCategoryRepositoryTest {
@@ -20,7 +16,15 @@ public class ProductCategoryRepositoryTest {
 
     @Test
     public void findOneTest() {
-        Optional<ProductCategory> category = repository.findById(1);
+        ProductCategory category = (repository.findOne(1));
         System.out.println(category.toString());
+    }
+
+    @Test
+    public void saveTest() {
+        ProductCategory productCategory = new ProductCategory();
+        productCategory.setCategoryName("Haitao's favarite");
+        productCategory.setCategoryType(4);
+        repository.save(productCategory);
     }
 }
