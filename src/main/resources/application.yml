@@ -8,6 +8,7 @@ spring:
   jpa:
     show-sql: true
 
-server:
-  servlet:
-    context-path: /sell
+# git 4-3 branch test
+#server:
+#  servlet:
+#    context-path: /sell
