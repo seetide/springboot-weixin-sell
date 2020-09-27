@@ -24,4 +24,13 @@ public class ProductCategory {
     private Date updateTime;
 
     private Date createTime;
+
+    public ProductCategory(String categoryName, Integer categoryType) {
+        this.categoryName = categoryName;
+        this.categoryType = categoryType;
+    }
+
+    public ProductCategory() {
+
+    }
 }
